@@ -1,0 +1,12 @@
+[user]
+	name = Laney Smith
+	email = lsmith.unc@gmail.com
+	username = laneysmith
+[github]
+	user = laneysmith
+[alias]
+	co = checkout
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[core]
+	excludesfile = /Users/laneysmith/.gitignore_global

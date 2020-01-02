@@ -1,32 +1,16 @@
 export HOME=/Users/laneysmith/
+
 alias c='clear'
-alias gb='git branch'
-alias gba='git branch -a'
-alias gco='git checkout '
-alias gcob='git checkout -b '
-alias gcorb='git checkout --track '
-alias gdlb='git branch -d '
-alias gdrb='git push -d origin '
-alias ggpush='git push origin `git rev-parse --abbrev-ref HEAD`'
-alias gst="git status"
-alias gsta='git stash'
-alias gstaa='git stash apply'
-alias gstd='git stash drop'
-alias gstl='git stash list'
-alias gstp='git stash pop'
-alias gsts='git stash show --text'
-alias gsu='git submodule update'
-alias gts='git tag -s'
-alias gtv='git tag | sort -V'
+alias clearnm="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +" # delete node_modules
+alias dcd='docker-compose down'
+alias dcu='docker-compose up'
+alias gdlb='git branch -d ' # delete local branch
 alias guncom='git reset --soft HEAD~1'
-alias gunignore='git update-index --no-assume-unchanged'
-alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
-alias gup='git pull --rebase'
-alias gupv='git pull --rebase -v'
-alias gvt='git verify-tag'
-alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
-alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit -m "--wip--"'
-alias w='webstorm'
+alias rmrfnm = 'rm -rf /node_modules && yarn install'
+alias yf='yarn format'
+alias yl='yarn lint'
+alias ys='yarn start'
+alias yt='yarn test'
 alias z='vi ~/.zshrc'
 alias sz='source ~/.zshrc'
 
@@ -51,7 +35,7 @@ eval "$(rbenv init -)"
 export PATH=/usr/local/sbin:/Users/laneysmith/Library/Python/3.7/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME.oh-my-zsh"
 
 # Set name of the theme to load from  ~/.oh-my-zsh/themes/
 ZSH_THEME="laneysmith"

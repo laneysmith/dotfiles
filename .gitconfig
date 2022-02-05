@@ -8,5 +8,8 @@
 	co = checkout
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	unstage = reset HEAD --
+        toss = reset --hard
 [core]
 	excludesfile = /Users/laneysmith/.gitignore_global
+	ignorecase = false

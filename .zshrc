@@ -11,6 +11,7 @@ alias yf='yarn format'
 alias yl='yarn lint'
 alias ys='yarn start'
 alias yt='yarn test'
+alias ytw='yarn test --watch'
 alias z='vi ~/.zshrc'
 alias sz='source ~/.zshrc'
 
@@ -34,14 +35,10 @@ eval "$(rbenv init -)"
 
 export PATH=/usr/local/sbin:/Users/laneysmith/Library/Python/3.7/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME.oh-my-zsh"
-
-# Set name of the theme to load from  ~/.oh-my-zsh/themes/
-ZSH_THEME="laneysmith"
-
+# zsh
+export ZSH="$HOME.oh-my-zsh" # Path to your oh-my-zsh installation
+ZSH_THEME="laneysmith" # Name of the theme to load from  ~/.oh-my-zsh/themes/
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 
 # android studio
@@ -60,15 +57,6 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 export JAVA_HOME=$(/usr/libexec/java_home)
-
-# rust
-# export PATH=/Users/laneysmith/.cargo/bin:/Users/laneysmith/.rvm/gems/ruby-2.3.0/bin:/Users/laneysmith/.rvm/gems/ruby-2.3.0@global/bin:/Users/laneysmith/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/laneysmith/.rvm/bin:/Users/laneysmith/Documents/go/bin:/usr/local/opt/go/libexec/bin:/usr/local/lib
-
-# git branch in prompt
-# parse_git_branch() {
-#     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-# }
-# export PS1="\[\033[35m\]\u \[\033[34m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

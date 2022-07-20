@@ -10,6 +10,7 @@
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	unstage = reset HEAD --
     toss = reset --hard
+	rebase-onto = "!f() { git rebase --onto main $(git merge-base \"$1\" \"$2\") \"$1\"; }; f"
 [core]
 	excludesfile = /Users/laneysmith/.gitignore_global
 	ignorecase = false

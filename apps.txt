@@ -1,0 +1,12 @@
+app-cleaner
+git
+google-chrome
+keepingyouawake
+nvm
+rectangle
+spotify
+visual-studio-code
+zsh
+zsh-autosuggestions
+zsh-completions
+zsh-syntax-highlighting

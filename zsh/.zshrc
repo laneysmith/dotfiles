@@ -1,9 +1,12 @@
 export HOME=/Users/laneysmith/
 
+# aliases
 alias c='clear'
 alias clearnm="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +" # delete node_modules
 alias dcd='docker-compose down'
 alias dcu='docker-compose up'
+alias dev='cd ~/Development'
+alias eg='ember generate'
 alias gdlb='git branch -d ' # delete local branch
 alias guncom='git reset --soft HEAD~1'
 alias rmrfnm='rm -rf /node_modules && yarn install'
@@ -20,7 +23,7 @@ alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # mov to gif converter; call like "movtogif in.mov out.gif"
-movtogif(){
+function movtogif(){
     ffmpeg -i "$1" -vf scale=800:-1 -r 10 -f image2pipe -vcodec ppm - |\
     convert -delay 5 -layers Optimize -loop 0 - "$2"
 }
@@ -38,11 +41,8 @@ export PATH=/usr/local/sbin:/Users/laneysmith/Library/Python/3.7/bin:$PATH
 # zsh
 export ZSH="$HOME.oh-my-zsh" # Path to your oh-my-zsh installation
 ZSH_THEME="laneysmith" # Name of the theme to load from  ~/.oh-my-zsh/themes/
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
-
-# android studio
-PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
 
 # go
 export GOPATH=$HOME/Documents/go

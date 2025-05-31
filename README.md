@@ -10,6 +10,16 @@
 xargs brew install < apps.txt
 ```
 
+### Dotfiles
+```sh
+./dotfiles/install.sh
+```
+
+### Zsh
+```sh
+./zsh/install.sh
+```
+
 ### OS Settings
 Finder > View
 * Show Status Bar

@@ -1,7 +1,6 @@
 app-cleaner
 git
 google-chrome
-keepingyouawake
 nvm
 rectangle
 spotify

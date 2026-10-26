@@ -1,11 +1,23 @@
+<!-- Canonical personal agent settings, shared across agents.
+     Consumed by: ~/.claude/CLAUDE.md (@import), ~/.codex/AGENTS.md (symlink), ~/.config/amp/AGENTS.md (@-mention).
+     Edit this file, not the per-agent ones. -->
+
 ## General communication on my behalf
 
 When sending messages on my behalf (Slack, email, PR comments, etc.), always clearly indicate the
 message is sent by my AI agent by prefixing with a 🤖. This does not apply to PR descriptions.
 
+## Investigating issues
+
+- Separate observed facts from hypotheses. Do not present a plausible explanation as an established root cause.
+- Identify competing explanations and run a check that distinguishes them before recommending a fix. Ask: "What evidence distinguishes this explanation from another cause that would produce the same symptoms?" Traffic patterns and agreement with an earlier suggestion are not enough.
+- Trace the actual runtime artifact and resolved dependency versions. A clean search of current source does not prove code is absent from production. Inspect relevant installed or published packages and compiled bundles, including files ignored by normal searches, such as `node_modules` and build output.
+- Support a root-cause conclusion with a reproduction, request trace, or verified intervention that connects the suspected cause to the observed behavior. If that evidence is unavailable, state what remains unverified and keep the conclusion provisional.
+- When challenged or given contradictory evidence, test the premise and revisit alternatives before elaborating the explanation. Verify claims about browser, cache, session, or platform behavior in the affected system rather than supplying an untested mechanism.
+
 ## Referring to PRs
 
-- Whenever you refer to a PR by its number — anywhere outside of GitHub: chat replies, Slack, docs — make the number a link to the PR (e.g. `[#36041](https://github.com/laneysmith/dotfiles/pull/36041)`), never a bare number.
+- Whenever you refer to a PR by its number — anywhere outside of GitHub: chat replies, Slack, docs — link to the PR using `<org-name>/<repo-name>#<pr-number>` as the link text (e.g. `[laneysmith/dotfiles#46567](https://github.com/laneysmith/dotfiles/pull/36041)`), never a bare number or a link labeled only with the number.
 
 ## Referring to files and lines
 
